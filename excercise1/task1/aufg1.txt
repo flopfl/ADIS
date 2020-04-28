@@ -1,0 +1,19 @@
+to setup my apache server i followed a few tutorials:
+
+https://www.youtube.com/watch?v=TrLAx27Npns 
+tutorial from Alessandro Castellani uploaded 30.04.2017 Title:"How to setup Apache,MySql and PHP on Ubuntu Linux"
+
+this included how to install apache2
+setup a virtualHost 
+and get PhP
+
+
+also used a tutorial from VULTR:https://www.vultr.com/docs/how-to-install-apache-mysql-and-php-on-ubuntu-17-04
+
+to find following command to get the php mod:
+sudo apt-get install libapache2-mod-php -y
+
+
+to get the cgi mod for apache i used:
+
+sudo a2enmod cgi

@@ -1,0 +1,20 @@
+We have to enable cgi on our apache2 server (this happend in exerc1).
+
+since we use ubuntu the scripts used for CGI have to be placed at:
+/usr/lib/cgi-bin
+
+We cant directly run java since it dosnt support enviroment variables anymore which is where cgi places most parameters.
+Instead we use a shell script to give java the needed parameters
+
+the script is copied from the following tutorial since it comes in handy:
+https://www.javaworld.com/article/2076863/write-cgi-programs-in-java.html
+By Pat L. Durante 1.1.1997 title "Write CGI programs in Java"
+
+most of the parameters arent actually used by the java programm and could just be deleted however since i dont know if there will be a continues task next week i just left them in the script.
+
+script:test.cgi
+
+#!/bin/bash
+java     -Dcgi.content_type=$CONTENT_TYPE     -Dcgi.content_length=$CONTENT_LENGTH     -Dcgi.request_method=$REQUEST_METHOD     -Dcgi.query_string=$QUERY_STRING     -Dcgi.server_name=$SERVER_NAME     -Dcgi.server_port=$SERVER_PORT     -Dcgi.script_name=$SCRIPT_NAME     -Dcgi.path_info=$PATH_INFO   test
+
+
